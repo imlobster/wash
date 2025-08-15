@@ -23,7 +23,7 @@ for /f "tokens=1,2 delims==" %%a in ('type "%WASH_CONFIG_FILE%"') do (
 )
 
 if not defined WASH_ROOT_DIR (
-    set "WASH_INIT_DIR=C:"
+    set "WASH_ROOT_DIR=C:"
 )
 
 if not defined WASH_INIT_DIR (
