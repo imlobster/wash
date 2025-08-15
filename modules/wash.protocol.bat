@@ -1,0 +1,1 @@
+set "washproto_shell=wash"

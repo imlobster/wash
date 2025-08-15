@@ -1,0 +1,5 @@
+set "WASH_PROMPT_OUTPUT=%WASH_PROMPT_TEMPLATE%"
+set "WASH_PROMPT_OUTPUT=!WASH_PROMPT_OUTPUT:{%%{username}%%}=%username%!"
+set "WASH_PROMPT_OUTPUT=!WASH_PROMPT_OUTPUT:{%%{cd}%%}=%wash_cd%!"
+set "WASH_PROMPT_OUTPUT=!WASH_PROMPT_OUTPUT:{%%{hostname}%%}=%computername%!"
+set "WASH_PROMPT_OUTPUT=!WASH_PROMPT_OUTPUT:{%%{errcode}%%}=%ERRORLEVEL%!"
