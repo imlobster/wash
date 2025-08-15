@@ -1,0 +1,11 @@
+@echo off
+
+setlocal EnableDelayedExpansion
+
+:main_loop
+set /p wash_prompt=<%~dp0\themes\ram.wash-theme
+set /p wash_input="%wash_prompt%"
+if /i "%wash_input%"=="exit" goto :end
+%wash_input%
+goto :main_loop
+:end

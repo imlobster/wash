@@ -14,11 +14,11 @@ Windows CMD or any other Terminal Emulator with CMD.
 
 ## Installation
 
-Just clone this repo and start [`wash.bat`](./wash.bat) instead of `cmd.exe`
+Just clone this repo, delete all but [`wash/`](./wash/) and from this point start only [`wash.bat`](./wash/wash.bat) instead of `cmd.exe`
 
 ## Usage
 
-To enter wash you need to start [`wash.bat`](./wash.bat), or execute it in CMD.
+To enter wash you need to start [`wash.bat`](./wash/wash.bat), or execute it in CMD.
 
 To use wash you need to enter original CMD commands.
 
@@ -28,7 +28,7 @@ To close executed in wash application press `Ctrl+C` and type `n`
 
 ## Configuration
 
-Config file is [`config.conf`](./config.conf).
+Config file is [`config.conf`](./wash/config.conf).
 No spaces near `=`.
 Don't break config.
 
@@ -48,7 +48,7 @@ Don't break config.
 
 ## Themes
 
-Themes must be placed in [`themes/`](./themes/).
+Themes must be placed in [`themes/`](./wash/themes/).
 Only the first line will be read.
 Some symbols may cause errors, for example - `!`.
 File extension must be `.wash-theme`.
@@ -65,12 +65,12 @@ File extension must be `.wash-theme`.
 
 #### Examples:
 
-See [`minitf`](./themes/minitf.wash-theme) and [`fr`](./themes/fr.wash-theme).
+See [`minitf`](./wash/themes/minitf.wash-theme) and [`fr`](./wash/themes/fr.wash-theme).
 
 ## Aliases
 
-Aliases located in [`modules/wash.wash.bat`](./modules/wash.wash.bat).
-The only way to make working aliases is to edit [`wash.wash`](./modules/wash.wash.bat) module.
+Aliases located in [`modules/wash.wash.bat`](./wash/modules/wash.wash.bat).
+The only way to make working aliases is to edit [`wash.wash`](./wash/modules/wash.wash.bat) module.
 `setlocal` is `EnableDelayedExpansion`.
 
 #### Default:
@@ -83,7 +83,7 @@ The only way to make working aliases is to edit [`wash.wash`](./modules/wash.was
 
 #### Examples:
 
-See already existing aliases in [`wash.wash`](./modules/wash.wash.bat).
+See already existing aliases in [`wash.wash`](./wash/modules/wash.wash.bat).
 
 ## Known issues
 
