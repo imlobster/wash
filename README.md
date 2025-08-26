@@ -1,4 +1,4 @@
-<img src="./man/showcase.png" align="right" width="128">
+<img src="./man/showcase.png" align="right" width="256">
 
 ### wash <sub><sup><sub>_(Windows Addicted Shell)_</sub></sup></sub>
 
