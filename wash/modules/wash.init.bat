@@ -34,6 +34,8 @@ if not defined WASH_APP_DIR (
     set "WASH_APP_DIR=\"
 )
 
+set "PATH=%PATH%;%WASH_ROOT_DIR%%WASH_APP_DIR%"
+
 %WASH_ROOT_DIR%
 cd "%WASH_ROOT_DIR%%WASH_INIT_DIR%"
 

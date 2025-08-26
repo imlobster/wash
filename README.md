@@ -24,7 +24,7 @@ To use wash you need to enter original CMD commands.
 
 Commands to controll wash described in **Aliases** chapter.
 
-To close executed in wash application press `Ctrl+C` and type `n`
+All programms from [`app_dir`](./wash/config.conf) is in %Path%.
 
 ## Configuration
 
@@ -69,7 +69,7 @@ See [`minitf`](./wash/themes/minitf.wash-theme) and [`fr`](./wash/themes/fr.wash
 
 ## Aliases
 
-Aliases located in [`modules/wash.wash.bat`](./wash/modules/wash.wash.bat).
+Aliases located in [`modules/wash.wash`](./wash/modules/wash.wash.bat).
 The only way to make working aliases is to edit [`wash.wash`](./wash/modules/wash.wash.bat) module.
 `setlocal` is `EnableDelayedExpansion`.
 
@@ -78,8 +78,6 @@ The only way to make working aliases is to edit [`wash.wash`](./wash/modules/was
 `\washed` - Exit wash.
 
 `\wash` - Reload wash.
-
-`\\` - Execute `.bat` from applications directory. Example: `\\myapp`
 
 #### Examples:
 
