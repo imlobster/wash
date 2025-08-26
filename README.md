@@ -19,7 +19,7 @@ Themes like [`powerwash`](./wash/themes/powerwash.wash-theme) require [NerdFont]
 
 ## Installation
 
-Clone this repository, keep only the [`wash/`](./wash/) directory, and from that point run [`wash.bat`](./wash/wash.bat) instead of `cmd.exe`
+Clone this repository, keep only the [`wash/`](./wash/) directory, and from that point run [`wash.bat`](./wash/wash.bat) instead of `cmd.exe`.
 
 ## Usage
 
@@ -27,7 +27,7 @@ To enter wash, run [`wash.bat`](./wash/wash.bat) or execute it in CMD.
 
 To use wash, enter standard CMD commands.
 
-Commands to controll wash are described in the **Aliases** section.
+Commands to controll wash are described in the [**Aliases**](./#Aliases) section.
 
 All programms from [`app_dir`](./wash/config.conf) are added to %PATH%. `washfetch` and `ls` does not provided by default.
 
@@ -76,6 +76,7 @@ See [`powerwash`](./wash/themes/powerwash.wash-theme), [`minitf`](./wash/themes/
 
 Aliases must be in the [`app_dir`](./wash/config.conf).
 Always set `@echo off` at the first line.
+Write aliases in batch (`.bat`).
 `setlocal` is `EnableDelayedExpansion`.
 
 #### Default:
@@ -102,7 +103,7 @@ All variables are accessible when an app is run from [`wash`](./wash/wash.bat).
 
 `%washproto_escape%` - Escape character.
 
-`%washproto_shell%` - Name of the current shell (`wash`);
+`%washproto_shell%` - Name of the current shell (`wash`).
 
 ## Known issues
 
