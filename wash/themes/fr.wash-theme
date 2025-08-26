@@ -1,1 +1,1 @@
-[{%{errcode}%}] {%{username}%} @ {%{cd}%} $ 
+{%{esc}%}[31m[{%{esc}%}[0m{%{errcode}%}{%{esc}%}[31m]{%{esc}%}[0m {%{username}%} {%{esc}%}[31m@{%{esc}%}[0m {%{cd}%} {%{esc}%}[31m${%{esc}%}[0m 

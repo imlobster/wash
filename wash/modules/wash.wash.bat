@@ -2,7 +2,6 @@
 
 set "wash_input="
 title %username%@wash
-color %WASH_COLORS%
 
 set "wash_cd=!cd:%WASH_ROOT_DIR%%WASH_HOME_DIR%=~!"
 
@@ -19,7 +18,7 @@ if /i "!wash_input:~0,7!"=="\washed" (
     goto :end
 )
 if /i "!wash_input:~0,5!"=="\wash" (
-    start "%WASH_GLOBAL_DIR%\wash.bat"
+    call "%WASH_GLOBAL_DIR%wash.bat"
     exit /b
 )
 
@@ -39,7 +38,6 @@ goto :main_loop
 
 :end
 cls
-color 0f
 echo Bye
 endlocal
 exit

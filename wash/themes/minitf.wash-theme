@@ -1,1 +1,1 @@
-* [{%{username}%}] {%{cd}%} [{%{errcode}%}] % 
+{%{esc}%}[93m*{%{esc}%}[0m [{%{esc}%}[93m{%{username}%}{%{esc}%}[0m] {%{cd}%} [{%{esc}%}[93m{%{errcode}%}{%{esc}%}[0m] % 

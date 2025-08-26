@@ -2,7 +2,7 @@
 
 ### wash <sub><sup><sub>_(Windows Addicted Shell)_</sub></sup></sub>
 
-First native, (kinda) customizable, shell for Windows CMD
+A native, (pretty) customizable shell for Windows CMD
 
 ![Made with Batch](https://img.shields.io/badge/Made%20with-Batch-white?style=flat-square)
 
@@ -10,27 +10,29 @@ First native, (kinda) customizable, shell for Windows CMD
 
 Windows with Batch interpreter.
 
-Windows CMD or any other Terminal Emulator with CMD.
+Windows CMD or any other terminal emulator with CMD support.
+
+Terminal emulator with ANSII support. 
 
 ## Installation
 
-Just clone this repo, delete all but [`wash/`](./wash/) and from this point start only [`wash.bat`](./wash/wash.bat) instead of `cmd.exe`
+Clone this repository, keep only the [`wash/`](./wash/) directory, and from that point run [`wash.bat`](./wash/wash.bat) instead of `cmd.exe`
 
 ## Usage
 
-To enter wash you need to start [`wash.bat`](./wash/wash.bat), or execute it in CMD.
+To enter wash, run [`wash.bat`](./wash/wash.bat) or execute it in CMD.
 
-To use wash you need to enter original CMD commands.
+To use wash, enter standard CMD commands.
 
-Commands to controll wash described in **Aliases** chapter.
+Commands to controll wash are described in the **Aliases** section.
 
-All programms from [`app_dir`](./wash/config.conf) is in %Path%.
+All programms from [`app_dir`](./wash/config.conf) are added to %PATH%.
 
 ## Configuration
 
-Config file is [`config.conf`](./wash/config.conf).
-No spaces near `=`.
-Don't break config.
+The configuration file is [`config.conf`](./wash/config.conf).
+Do not use spaces around the `=` sign.
+Do not modify the config structure.
 
 #### Parameters:
 
@@ -43,8 +45,6 @@ Don't break config.
 `app_dir` - Directory in root that wash will use for locating applications. Example: `app_dir=\Users\Apps`
 
 `theme` - Name of the prompt theme inside `themes/`. Example: `theme=minitf`
-
-`color` - Color in CMD format. Example: `color=0f`
 
 ## Themes
 
@@ -63,14 +63,16 @@ File extension must be `.wash-theme`.
 
 `{%{errcode}%}` - Latest exit code. Result: `127`
 
+`{%{esc}%}` - Escape character. Usage: `{%{esc}%}[32mGreen Text{%{esc}%}[0m`
+
 #### Examples:
 
 See [`minitf`](./wash/themes/minitf.wash-theme) and [`fr`](./wash/themes/fr.wash-theme).
 
 ## Aliases
 
-Aliases located in [`modules/wash.wash`](./wash/modules/wash.wash.bat).
-The only way to make working aliases is to edit [`wash.wash`](./wash/modules/wash.wash.bat) module.
+Aliases are located in [`modules/wash.wash`](./wash/modules/wash.wash.bat).
+The only way to create working aliases is to edit the [`wash.wash`](./wash/modules/wash.wash.bat) module.
 `setlocal` is `EnableDelayedExpansion`.
 
 #### Default:
@@ -83,23 +85,32 @@ The only way to make working aliases is to edit [`wash.wash`](./wash/modules/was
 
 See already existing aliases in [`wash.wash`](./wash/modules/wash.wash.bat).
 
+## Wash Protocol
+
+Environment variables are located in [`wash.protocol`](./wash/modules/wash.protocol.bat).
+
+All variables are accessible when an app is run from [`wash`](./wash/wash.bat).
+
+#### Constants:
+
+`%washproto_escape%` - Escape character.
+
+`%washproto_shell%` - Name of the current shell (`wash`);
+
 ## Known issues
 
 Do not take wash too seriously.
 
-#### Instability and Maintaining:
+#### Instability and Maintenance:
+Since Batch is a very strict and limited language, wash is difficult to debug and maintain.
+Most errors are caused by Batch's specific syntax and interpreter limitations.
 
-Since Batch is very strict and limited language - wash is hard to debug and review.
-Most errors caused by Batch's specific syntax and interpreter.
+#### Experimental Nature and Support:
+Initially, wash was created as an experimental, non-trivial fun project.
+Despite this, it may still be useful in certain scenarios.
 
-#### Facetiousness and Supportability:
-
-At the very beginning - wash was made as an experimental non-trivial fun project.
-As for that, it still may be useful in some cases.
-
-#### Slowness and Latency:
-
-Batch is interpreting, scripting language.
-Batch was never fast. There is nothing to do with it.
+#### Performance and Speed:
+Batch is an interpreted scripting language.
+Batch was never designed for speed, and there's little that can be done about it.
 
 <sub><sup>Featuring: Tea</sup></sub>
