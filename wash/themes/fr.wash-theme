@@ -1,1 +1,1 @@
-{%{esc}%}[31m[{%{esc}%}[0m{%{errcode}%}{%{esc}%}[31m]{%{esc}%}[0m {%{username}%} {%{esc}%}[31m@{%{esc}%}[0m {%{cd}%} {%{esc}%}[31m${%{esc}%}[0m 
+\e[31m[\e[0m\?\e[31m]\e[0m \u \e[31m@\e[0m \w \e[31m$\e[0m 

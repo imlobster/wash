@@ -1,10 +1,11 @@
-<img src="./logo.png" align="right" width="128">
+<img src="./man/showcase.png" align="right" width="128">
 
 ### wash <sub><sup><sub>_(Windows Addicted Shell)_</sub></sup></sub>
 
 A native, (pretty) customizable shell for Windows CMD
 
-![Made with Batch](https://img.shields.io/badge/Made%20with-Batch-white?style=flat-square)
+<img src="./man/logo.png" width="20"> ![Made with Batch](https://img.shields.io/badge/Made%20with-Batch-white?style=flat-square)
+
 
 ## Requirements
 
@@ -12,7 +13,9 @@ Windows with Batch interpreter.
 
 Windows CMD or any other terminal emulator with CMD support.
 
-Terminal emulator with ANSII support. 
+Terminal emulator with ANSII support.
+
+Themes like [`powerwash`](./wash/themes/powerwash.wash-theme) require [NerdFont](https://www.nerdfonts.com/font-downloads).
 
 ## Installation
 
@@ -26,7 +29,7 @@ To use wash, enter standard CMD commands.
 
 Commands to controll wash are described in the **Aliases** section.
 
-All programms from [`app_dir`](./wash/config.conf) are added to %PATH%.
+All programms from [`app_dir`](./wash/config.conf) are added to %PATH%. `washfetch` and `ls` does not provided by default.
 
 ## Configuration
 
@@ -55,24 +58,24 @@ File extension must be `.wash-theme`.
 
 #### Variables:
 
-`{%{username}%}` - Windows current user name. Result: `user`
+`\u` - Windows current user name. Result: `user`
 
-`{%{cd}%}` - Pretty current directory. Result: `C:\Users`, `~`, `~\Projects`
+`\w` - Pretty current directory. Result: `C:\Users`, `~`, `~\Projects`
 
-`{%{hostname}%}` - Current computer name. Result: `USERPC`
+`\h` - Current computer name. Result: `USERPC`
 
-`{%{errcode}%}` - Latest exit code. Result: `127`
+`\?` - Latest exit code. Result: `127`
 
-`{%{esc}%}` - Escape character. Usage: `{%{esc}%}[32mGreen Text{%{esc}%}[0m`
+`\e` - Escape character. Usage: `\e[32mGreen Text\e[0m`
 
 #### Examples:
 
-See [`minitf`](./wash/themes/minitf.wash-theme) and [`fr`](./wash/themes/fr.wash-theme).
+See [`powerwash`](./wash/themes/powerwash.wash-theme), [`minitf`](./wash/themes/minitf.wash-theme) and [`fr`](./wash/themes/fr.wash-theme).
 
 ## Aliases
 
-Aliases are located in [`modules/wash.wash`](./wash/modules/wash.wash.bat).
-The only way to create working aliases is to edit the [`wash.wash`](./wash/modules/wash.wash.bat) module.
+Aliases must be in the [`app_dir`](./wash/config.conf).
+Always set `@echo off` at the first line.
 `setlocal` is `EnableDelayedExpansion`.
 
 #### Default:
@@ -83,7 +86,11 @@ The only way to create working aliases is to edit the [`wash.wash`](./wash/modul
 
 #### Examples:
 
-See already existing aliases in [`wash.wash`](./wash/modules/wash.wash.bat).
+`ls` alias for `eza`:
+```batch
+@echo off
+call %~dp0bin\eza.exe --color=always --icons=always -G %*
+```
 
 ## Wash Protocol
 
@@ -104,6 +111,7 @@ Do not take wash too seriously.
 #### Instability and Maintenance:
 Since Batch is a very strict and limited language, wash is difficult to debug and maintain.
 Most errors are caused by Batch's specific syntax and interpreter limitations.
+For example: Any command with `&&` followed by a program from `%PATH%` will terminate wash. To fix this use `&& call` instead.
 
 #### Experimental Nature and Support:
 Initially, wash was created as an experimental, non-trivial fun project.

@@ -1,5 +1,7 @@
 @echo off
 
+chcp 65001
+
 set "WASH_GLOBAL_DIR=%~dp0"
 
 setlocal EnableDelayedExpansion

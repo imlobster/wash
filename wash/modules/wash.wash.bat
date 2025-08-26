@@ -18,7 +18,7 @@ if /i "!wash_input:~0,7!"=="\washed" (
     goto :end
 )
 if /i "!wash_input:~0,5!"=="\wash" (
-    call "%WASH_GLOBAL_DIR%wash.bat"
+    call "%WASH_GLOBAL_DIR%\wash.bat"
     exit /b
 )
 
