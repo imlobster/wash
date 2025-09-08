@@ -45,7 +45,7 @@ Do not modify the config structure.
 
 `init_dir` - Directory in root that will be entered on wash startup. Example: `init_dir=\Users`
 
-`home_dir` - Directory in root that will become `~` in `{%{cd}%}`. Example: `home_dir=\Users\Admin`
+`home_dir` - Directory in root that will become `~` in `\:w`. Example: `home_dir=\Users\Admin`
 
 `app_dir` - Directory in root that wash will use for locating applications. Example: `app_dir=\Users\Apps`
 
