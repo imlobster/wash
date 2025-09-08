@@ -45,13 +45,13 @@ cls
 
 if not defined WASH_THEME_NAME (
     echo [wash] theme not found
-    set "WASH_PROMPT_TEMPLATE={%%{cd}%%} > "
+    set "WASH_PROMPT_TEMPLATE=\:w > "
     goto :end_checktheme
 )
 
 if not defined WASH_PROMPT_TEMPLATE (
     echo [wash] theme file not found or corrupted
-    set "WASH_PROMPT_TEMPLATE={%%{cd}%%} > "
+    set "WASH_PROMPT_TEMPLATE=\:w > "
 )
 
 :end_checktheme
