@@ -60,19 +60,19 @@ File extension must be `.wash-theme`.
 
 #### Variables:
 
-`\u` - Windows current user name. Result: `user`
+`\:u` - Windows current user name. Result: `user`
 
-`\w` - Pretty current directory. Result: `C:\Users`, `~`, `~\Projects`
+`\:w` - Pretty current directory. Result: `C:\Users`, `~`, `~\Projects`
 
-`\h` - Current computer name. Result: `USERPC`
+`\:h` - Current computer name. Result: `USERPC`
 
-`\?` - Latest exit code. Result: `127`
+`\:?` - Latest exit code. Result: `127`
 
-`\e` - Escape character. Usage: `\e[32mGreen Text\e[0m`
+`\:e` - Escape character. Usage: `\:e[32mGreen Text\:e[0m`
 
 #### Examples:
 
-See [`powerwash`](./wash/themes/powerwash.wash-theme), [`minitf`](./wash/themes/minitf.wash-theme) and [`fr`](./wash/themes/fr.wash-theme).
+See [`powerwash`](./wash/themes/powerwash.wash-theme), [`minitf`](./wash/themes/minitf.wash-theme), [`let`](./wash/themes/let.wash-theme) and [`fr`](./wash/themes/fr.wash-theme).
 
 ## Aliases
 
