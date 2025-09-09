@@ -1,5 +1,9 @@
 ## NOW
 
+Partially fixed the `&&` issue, remaining the `echo "hello && world"` problem
+
+## September 8 2025
+
 Fixed default theme, that appears when theme in config is invalid
 
 ## September 8 2025

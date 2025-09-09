@@ -114,7 +114,7 @@ Do not take wash too seriously.
 #### Instability and Maintenance:
 Since Batch is a very strict and limited language, wash is difficult to debug and maintain.
 Most errors are caused by Batch's specific syntax and interpreter limitations.
-For example: Any command with `&&` followed by a program from `%PATH%` will terminate wash. To fix this use `&& call` instead.
+For example: Command like `echo "hello && world"` will be interpreted as `echo "hello` and `world"`.
 
 #### Experimental Nature and Support:
 Initially, wash was created as an experimental, non-trivial fun project.

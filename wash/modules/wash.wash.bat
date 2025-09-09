@@ -33,7 +33,17 @@ if /i "!wash_input:~0,9!"=="@echo off" (
     goto :main_loop
 )
 
-call %wash_input%
+set "cmds=!wash_input!"
+set "current_cmd="
+:process_commands
+for /f "tokens=1* delims=&&" %%a in ("!cmds!") do (
+    set "current_cmd=%%a"
+    set "cmds=%%b"
+    for /f "tokens=* delims= " %%x in ("!current_cmd!") do set "current_cmd=%%x"
+    call !current_cmd!
+)
+if defined cmds goto :process_commands
+
 goto :main_loop
 
 :end
