@@ -65,7 +65,7 @@ File extension must be `.wash-theme`.
 
 `\:u` - Windows current user name. Result: `user`
 
-`\:w` - Pretty current directory. Result: `C:\Users`, `~`, `~\Projects`
+`\:w` - Nice current directory. Result: `C:\Users`, `~`, `~\Projects`
 
 `\:h` - Current computer name. Result: `USERPC`
 
