@@ -18,7 +18,10 @@ Themes like [`powerwash`](./wash/themes/powerwash.wash-theme) require [NerdFont]
 
 ## Installation
 
-Clone this repository, keep only the [`wash/`](./wash/) directory, and from that point run [`wash.bat`](./wash/wash.bat) instead of `cmd.exe`.
+Install `wash.zip` from the [latest release](https://github.com/imlobster/wash/releases/latest) and unzip it.
+Or clone this repository and keep only the [`wash/`](./wash/) directory.
+
+From that point run [`wash.bat`](./wash/wash.bat) instead of `cmd.exe`.
 
 Aliases and programms from showcase are not available by default.
 
@@ -64,7 +67,7 @@ File extension must be `.wash-theme`.
 
 `\:u` - Windows current user name. Result: `user`
 
-`\:w` - Pretty current directory. Result: `C:\Users`, `~`, `~\Projects`
+`\:w` - Nice current directory. Result: `C:\Users`, `~`, `~\Projects`
 
 `\:h` - Current computer name. Result: `USERPC`
 
