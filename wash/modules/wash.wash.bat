@@ -47,7 +47,6 @@ if defined cmds goto :process_commands
 goto :main_loop
 
 :end
-cls
 echo Bye
 endlocal
 exit

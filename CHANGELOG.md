@@ -1,4 +1,10 @@
-## NOW
+## NOW (November 13 2025)
+
+Now wash can be configured from `~\.washrc.cmd`.
+Aliases now can be created with `doskey` that is way comfortable than the old `ls.bat` way.
+Added new theme - `gone`
+
+## September 9 2025
 
 Partially fixed the `&&` issue, remaining the `echo "hello && world"` problem
 

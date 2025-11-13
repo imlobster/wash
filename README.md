@@ -6,7 +6,6 @@ A native, (pretty) customizable shell for Windows CMD
 
 <img src="./man/logo.png" width="20"> ![Made with Batch](https://img.shields.io/badge/Made%20with-Batch-white?style=flat-square)
 
-
 ## Requirements
 
 Windows with Batch interpreter.
@@ -35,7 +34,10 @@ All programms from [`app_dir`](./wash/config.conf) are added to %PATH%.
 
 ## Configuration
 
-The configuration file is [`config.conf`](./wash/config.conf).
+Many features can be configured directly from the batch script.
+Create `.washrc.cmd` at your selected home directory and see the [**Aliases**](./#Aliases) section.
+
+General configuration file is [`config.conf`](./wash/config.conf).
 Do not use spaces around the `=` sign.
 Do not modify the config structure.
 
@@ -72,16 +74,14 @@ File extension must be `.wash-theme`.
 
 #### Examples:
 
-See [`powerwash`](./wash/themes/powerwash.wash-theme), [`minitf`](./wash/themes/minitf.wash-theme), [`let`](./wash/themes/let.wash-theme) and [`fr`](./wash/themes/fr.wash-theme).
+See [`powerwash`](./wash/themes/powerwash.wash-theme), [`minitf`](./wash/themes/minitf.wash-theme), [`let`](./wash/themes/let.wash-theme), [`gone`](./wash/themes/gone.wash-theme) and [`fr`](./wash/themes/fr.wash-theme).
 
 ## Aliases
 
-Aliases must be in the [`app_dir`](./wash/config.conf).
-Always set `@echo off` at the first line.
-Write aliases in batch (`.bat`).
-`setlocal` is `EnableDelayedExpansion`.
+To create aliases to a commands you can use such thing as `doskey`.
+For the best experience, recomended to write them at your `.washrc.cmd`.
 
-#### Default:
+#### Built In:
 
 `\washed` - Exit wash.
 
@@ -92,8 +92,13 @@ Write aliases in batch (`.bat`).
 `ls` alias for `eza`:
 ```batch
 @echo off
-call %~dp0bin\eza.exe --color=always --icons=always -G %*
+
+doskey ls=eza --colour=always $*
+doskey la=eza -a -a --colour=always $*
+doskey ll=eza -l -a -a --colour=always $*
 ```
+
+Note that if, for example, `eza` binary is not located somewhere in your %PATH% directories (for example, that one you wrote in [`app_dir`](./wash/config.conf)) it will not be found.
 
 ## Wash Protocol
 
@@ -105,7 +110,7 @@ All variables are accessible when an app is run from [`wash`](./wash/wash.bat).
 
 `%washproto_escape%` - Escape character.
 
-`%washproto_shell%` - Name of the current shell (`wash`).
+`%washproto_shell%` - Name of the current shell (mostly `wash`).
 
 ## Known issues
 
@@ -114,11 +119,12 @@ Do not take wash too seriously.
 #### Instability and Maintenance:
 Since Batch is a very strict and limited language, wash is difficult to debug and maintain.
 Most errors are caused by Batch's specific syntax and interpreter limitations.
-For example: Command like `echo "hello && world"` will be interpreted as `echo "hello` and `world"`.
+For example: Command like `echo "hello && world"` will be interpreted as `echo "hello` and `world"`, or anything that ends with `/?` will print `call` command help page.
 
 #### Experimental Nature and Support:
 Initially, wash was created as an experimental, non-trivial fun project.
 Despite this, it may still be useful in certain scenarios.
+I use it from the day i created it and im not complaining most of the time.
 
 #### Performance and Speed:
 Batch is an interpreted scripting language.

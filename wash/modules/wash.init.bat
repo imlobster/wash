@@ -55,3 +55,7 @@ if not defined WASH_PROMPT_TEMPLATE (
 )
 
 :end_checktheme
+
+if exist %WASH_ROOT_DIR%%WASH_HOME_DIR%\.washrc.cmd (
+	call %WASH_ROOT_DIR%%WASH_HOME_DIR%\.washrc.cmd
+)
